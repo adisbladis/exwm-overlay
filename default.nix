@@ -157,6 +157,10 @@ in
             generated = ./repos/elpa/elpa-generated.nix;
           };
 
+          nongnuPackages = esuper.nongnuPackages.override {
+            generated = ./repos/nongnu/nongnu-generated.nix;
+          };
+
           orgPackages = esuper.orgPackages.override {
             generated = ./repos/org/org-generated.nix;
           };
